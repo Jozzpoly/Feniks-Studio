@@ -2,6 +2,8 @@
 
 **Status: propozycja Astry do oceny, 14 października 2026.** To projekt doświadczenia i granic odpowiedzialności. Nie stanowi jeszcze zatwierdzonego zakresu wydania, specyfikacji formatu ani planu implementacji. Dalsze odkrycia i używanie mogą go zmienić.
 
+**Dalszy krok, 15 października:** po poleceniu kontynuacji opracowano [konkretny plan wykonania wariantu A](../plans/2026-10-15-pierwsza-sesja-studio.md). Dokument poniżej pozostaje źródłem intencji i granic; plan wybiera pierwszy host, zakres importu i sprawdziany. Oba czekają na ocenę zakresu przed implementacją.
+
 ## 1. Po co powstaje Studio
 
 Owner chce sam tworzyć mapę, miejsca, rzeczy i ich wygląd oraz eksperymentować z tym, co się w świecie dzieje. Agenci mają dostarczać mechanizmy, narzędzia i techniczne wsparcie. Ważny wynik ich pracy to możliwość wykonania następnej podobnej czynności bez ponownego zlecania jej agentowi.
