@@ -13,7 +13,7 @@ Czytaj `README.md` i wskazany tam aktualny projekt. Rozróżniaj bezpośrednią 
 
 ## Koordynacja i zakres
 
-**Nie uruchamiaj, nie wznawiaj ani nie zlecaj pracy Claude bez wyraźnej prośby Ownera.** Dotyczy to także przycisków ponowienia odpowiedzi. Owner najpierw sam testuje Jaskinię v2 i zbiera feedback. Starsza ogólna zgoda na współpracę agentów nie uchyla tej zasady.
+**Nie ingeruj w pracę Claude w jego rozmowie z Ownerem bez wyraźnej prośby Ownera.** Nie uruchamiaj ani nie wznawiaj go tam, również przyciskami ponowienia odpowiedzi. Aktualizacja Ownera z 16 października dopuszcza współpracę innymi torami z Opusem oraz samodzielny kontakt z agentami browserowymi. Nie nakazuje takiego kontaktu ani nie zatwierdza implementacji. Odczytuj najnowszą instrukcję; nie przejmuj bieżącego zadania drugiego agenta.
 
 Korzystaj z istniejącej wiedzy i upoważnionej współpracy, ale nie przejmuj kampanii MiniFeniksa, Jaskini ani labów. Przy delegacji podawaj rozłączny zakres, źródła, oczekiwany wynik i sposób jego sprawdzenia. Nie mnoż opinii bez decyzji, którą mogą zmienić.
 

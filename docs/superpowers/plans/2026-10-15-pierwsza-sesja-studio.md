@@ -1,5 +1,7 @@
 # Pierwsza sesja Feniks Studio — Implementation Plan
 
+> **Wstrzymany — 16 października 2026, na bezpośrednią prośbę Ownera.** Nie rozpoczynać poniższych zadań. [Nowsze rozpoznanie](../../research/2026-10-16-wspolny-warsztat.md) otwiera ponownie wybór osobnej aplikacji, hosta, warsztatu i kolejności. Zasady autorstwa i ciągłości pozostają wartościowym materiałem; ten dokument jest datowanym wariantem do ponownej oceny.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. Read the linked spec before implementation.
 
 **Goal:** Autor sam składa miejsce z własnych modeli, zmienia je, zachowuje wariant i wraca do swojej pracy wraz z warsztatem, bez układania sceny przez agenta.

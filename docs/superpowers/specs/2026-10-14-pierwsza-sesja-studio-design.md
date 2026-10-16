@@ -1,5 +1,7 @@
 # Pierwsza sesja Feniks Studio
 
+**Aktualizacja 16 października:** [rozpoznanie wspólnego warsztatu](../../research/2026-10-16-wspolny-warsztat.md) otwiera ponownie miejsce pierwszej sesji i wybór hosta. Plan z 15 października jest wstrzymany na prośbę Ownera. Poniższy dokument zachowuje intencje i propozycję doświadczenia; nie zatwierdza osobnej aplikacji.
+
 **Status: propozycja Astry do oceny, 14 października 2026.** To projekt doświadczenia i granic odpowiedzialności. Nie stanowi jeszcze zatwierdzonego zakresu wydania, specyfikacji formatu ani planu implementacji. Dalsze odkrycia i używanie mogą go zmienić.
 
 **Dalszy krok, 15 października:** po poleceniu kontynuacji opracowano [konkretny plan wykonania wariantu A](../plans/2026-10-15-pierwsza-sesja-studio.md). Dokument poniżej pozostaje źródłem intencji i granic; plan wybiera pierwszy host, zakres importu i sprawdziany. Oba czekają na ocenę zakresu przed implementacją.
