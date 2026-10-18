@@ -1,28 +1,31 @@
 # Feniks Studio
 
-Warsztat do samodzielnego tworzenia miejsc, rzeczy, sytuacji i eksperymentów przyszłego Feniksa. Autor komponuje świat oraz własne środowisko pracy. Agenci rozwijają narzędzia i mechanizmy, dzięki którym kolejne pomysły można realizować samemu.
+Warsztat do tworzenia miejsc, rzeczy, sytuacji i eksperymentów przyszłego Feniksa. Owner komponuje własny świat i środowisko pracy; agenci rozwijają jego możliwości oraz wnoszą własne badania i twórczość. Studio dojrzewa razem z Feniksem i laboratoriami, lecz ich dzisiejsze ograniczenia nie wyznaczają granic jego autorstwa.
 
-Studio ma dojrzewać razem z Feniksem i laboratoriami. Jego możliwości autorskie mogą wyprzedzać możliwości wykonania w poszczególnych labach. Własna mapa zachowuje swoją wartość także wtedy, gdy żaden obecny eksperyment nie potrafi jeszcze użyć jej w całości.
+## Stan — 18 października 2026
 
-## Stan — 16 października 2026
+**Opus prowadzi budowę Jaskini/Studio. Astra pomaga analizą, rozstrzygającymi próbami, recenzją i uzgodnionymi wkładami.** Wspólny kierunek jest zapisany w [Kompasie Jaskini (#5)](https://github.com/Jozzpoly/Jozz-Cave-Workbench/issues/5). Jedno miejsce pracy dla Ownera nie oznacza jednego repo ani monolitu.
 
-Owner wskazał to repozytorium jako miejsce powstawania Studio. **Przejście do implementacji planu z 15 października jest wstrzymane na jego prośbę.** Rozwój Jaskini otworzył ponownie pytanie o jeden wieloletni program twórczy. Nie wybrano jeszcze jego nazwy, hosta, podziału repozytoriów ani technologii. Repo nie zawiera aplikacji.
+**Bieżący materiał Astry do recenzji:** [Studio po v6 — wkład do wspólnej budowy](docs/superpowers/plans/2026-10-18-studio-po-v6-do-recenzji.md). Skupia się na ciągłości autorskiego miejsca: konkretnej wersji materiału i jego ustawień, wariantach, historii, zapisie i odzyskaniu pracy. Nie jest zleceniem równoległej budowy ani nowym kompasem.
 
-**Aktualny punkt wejścia:** [ponowne rozpoznanie wspólnego warsztatu, źródeł i miejsca Studio](docs/research/2026-10-16-wspolny-warsztat.md), uzupełnione o wieczorny stan v5, kampanii 04 MiniFeniksa i współpracy. Rekomendacja Astry: porównać sposoby dostarczenia tej samej wymagającej zdolności autorskiej, bez pierwszeństwa dla konkretnego hosta. Jaskinia jest ważnym kandydatem; własne repozytorium również nie przesądza o osobnej aplikacji.
+Opus rozwija [fundament v6 w PR #4](https://github.com/Jozzpoly/Jozz-Cave-Workbench/pull/4#issuecomment-6251726558): wiele kart, adresy, rewizje ustawień materiałów i zależności plików. [Poprosił o checkpoint lokalnego szkicu Studio](https://github.com/Jozzpoly/Jozz-Cave-Workbench/pull/2#issuecomment-6251726713), aby wykorzystać dokument, warianty i cofanie. Nie ma potrzeby przejmowania całego starego formatu ani osobnego renderowania.
 
-[Przeczytaj propozycję pierwszej sesji i jej granic architektonicznych](docs/superpowers/specs/2026-10-14-pierwsza-sesja-studio-design.md).
+## Co zawiera ten checkpoint
 
-[Plan z 15 października](docs/superpowers/plans/2026-10-15-pierwsza-sesja-studio.md) zachowuje konkretny dorobek o tożsamości, wariantach, zapisie, własnych modelach i powrocie. Osobna aplikacja, Dockview, pierwszy format i kolejność wykonania wymagają ponownej oceny; nie rozpoczynać sześciu zadań według dawnej rekomendacji.
+- `src/document.mjs` i `tests/document.test.mjs`: atomowa sesja dokumentu, walidacja, warianty, undo/redo. Obecny schemat osadza GLB; wymaga adaptacji do wspólnej biblioteki materiałów i rewizji interpretacji.
+- `src/viewport.mjs` i `tests/glb.test.mjs`: wcześniejsza próba własnego widoku i kontroli GLB. Mechanizmy lifecycle i odrzucenia spóźnionych wyników są dawcą; drugi runtime Three nie jest rekomendacją dalszej integracji.
+- `src/jaskinia-window.mjs` i `tools/build.mjs`: **niezakwalifikowany szkic integracji ze starą Jaskinią v5**, zachowany dla przeglądu. Nie stanowi gotowego UI ani bezpiecznego magazynu pracy Ownera.
 
-Proponowany pierwszy wynik: można przynieść własne materiały, ułożyć z nich własne miejsce, przebudować je, zachować alternatywę i później wrócić do rozpoczętej pracy. Pierwsza praca ma być użyteczna autorowi; jej niewielki zakres nie definiuje granic przyszłego świata.
+Testy modułów: `npm ci --ignore-scripts`, następnie `npm test`. Wynik nie dowodzi działania całego Studio. `build` wymaga starej lokalnej kopii badawczej Jaskini i nie jest przenośnym buildem produktu; `test:browser` wskazuje jeszcze nieutworzony plik. Nie przedstawiamy tych poleceń jako gotowej drogi „wypróbuj Studio”.
 
-## Relacje z pozostałymi projektami
+Ostatni własny przebieg Astry, 18 października: `npm test` — **28 PASS, 0 FAIL** (19 testów dokumentu, 9 testów kontroli GLB). Nie uruchamiano builda ani pełnej sesji UI tego szkicu.
 
-- **Feniks** wyznacza szerszą ambicję: materialny świat, różnorodne ciała, samodzielni mieszkańcy, przedmioty, zasoby i mechanizmy, których jeszcze nie znamy.
-- **MiniFeniks** jest szczególnie niepewną próbą dzisiejszych możliwości. Dostarcza doświadczeń i możliwych mechanizmów; jego powodzenie, format świata i tempo rozwoju nie są warunkiem autorstwa w Studio.
-- **Jaskinia** jest młodym, niedopracowanym minimum warsztatu, które chcemy znacznie poprawić i rozszerzyć. Dostarcza rzeczywistych osiągnięć komponowania pracy. Nie wybrano jej kodu jako docelowej podstawy ani automatycznego osadzenia całego Studio w ramce.
-- **Laby** mogą korzystać z wybranej części autorskiego projektu przez konkretne dostosowanie. Ograniczenie jednego odbiorcy nie powinno po cichu zubażać projektu autora.
+Wyniki i ograniczenia checkpointu: [plan do recenzji](docs/superpowers/plans/2026-10-18-studio-po-v6-do-recenzji.md). Dalszy adapter ma korzystać z `window.Jaskinia`, wspólnych Materiałów i sceny; dokument i historia treści pozostają poza stanem okna i historią układu.
 
-Najbliższy proponowany przypadek: własne miejsce z wnętrzem, przejściem i różnicą wysokości, alternatywną kompozycją oraz trwałym powrotem. Sprawdzian obejmuje też drugą, odmienną pracę autora bez kolejnego programowania. Sam zapis danych i zachowanie okien nie kwalifikują tej zdolności. Najpierw porównanie ograniczonego zakresu zmian i krótki projekt próby; implementacja dawnego planu pozostaje wstrzymana. Dalsze autorstwo może obejmować także żywe światy oraz świadomie komponowane eksperymenty.
+## Starsze rozpoznanie
 
-Zasady współpracy i aktualne ograniczenia: [AGENTS.md](AGENTS.md).
+[Pierwsza sesja z 14 października](docs/superpowers/specs/2026-10-14-pierwsza-sesja-studio-design.md) zachowuje cel własnego miejsca, alternatywy i powrotu. [Plan z 15 października](docs/superpowers/plans/2026-10-15-pierwsza-sesja-studio.md) oraz [wczesny plan z 18 października](docs/superpowers/plans/2026-10-18-miejsce-w-jaskini.md) są historyczne, nie wykonuje się ich automatycznie. [Rozpoznanie wspólnego warsztatu](docs/research/2026-10-16-wspolny-warsztat.md) opisuje poprzedni etap.
+
+MiniFeniks pozostaje niepewną próbą; nie wyznacza modelu Studio. Jaskinia jest młodym warsztatem do rozwijania, a nie ostatecznym sufitem możliwości. Laby mogą wykorzystywać wybraną część autorskiej pracy przez jawne dostosowania.
+
+Zasady współpracy, publikacji i komunikacji: [AGENTS.md](AGENTS.md).
