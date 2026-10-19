@@ -4,7 +4,13 @@ Warsztat do samodzielnego tworzenia miejsc, rzeczy, sytuacji i eksperymentów pr
 
 Studio ma dojrzewać razem z Feniksem i laboratoriami. Jego możliwości autorskie mogą wyprzedzać możliwości wykonania w poszczególnych labach. Własna mapa zachowuje swoją wartość także wtedy, gdy żaden obecny eksperyment nie potrafi jeszcze użyć jej w całości.
 
-## Stan — 16 października 2026
+## Stan — 20 października 2026
+
+W tym szkicu powstaje [Tworzywo — rozbierz, złóż, użyj](experiments/material-as-construction/README.md): samodzielna próba wyjmowania części z modeli i budowania z nich nowych konstrukcji, w natywnym oknie Jaskini v6.3. Zawiera syntetyczne modele, rzeczywisty manipulator, receptury, niezależne egzemplarze i odtwarzalny test transportu pliku do świeżego profilu. Jest materiałem do wspólnej recenzji, nie wdrożonym edytorem Jaskini.
+
+Wcześniejszy [PR #1](https://github.com/Jozzpoly/Feniks-Studio/pull/1) zachowuje odrębny checkpoint dokumentów i wariantów. Ta próba nie wymaga jego scalenia. Jaskinia dostarcza używaną powłokę i runtime; jej bieżącą produkcję prowadzi Opus. Zakres prób Studio obejmuje samodzielne poszukiwanie nowych możliwości autora bez kopiowania powłoki aplikacji.
+
+## Historyczny stan — 16 października 2026
 
 Owner wskazał to repozytorium jako miejsce powstawania Studio. **Przejście do implementacji planu z 15 października jest wstrzymane na jego prośbę.** Rozwój Jaskini otworzył ponownie pytanie o jeden wieloletni program twórczy. Nie wybrano jeszcze jego nazwy, hosta, podziału repozytoriów ani technologii. Repo nie zawiera aplikacji.
 
