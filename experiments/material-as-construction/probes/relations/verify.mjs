@@ -2,6 +2,7 @@
 // Playwright uses a fresh profile and refuses requests outside this localhost origin.
 import {createRequire} from 'node:module';
 import {readFile,writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
 import assert from 'node:assert/strict';
 const require=createRequire(process.env.PLAYWRIGHT_PACKAGE||import.meta.url),{chromium}=require('playwright');
 const {url,ref}=JSON.parse(await readFile(new URL('server.json',import.meta.url),'utf8'));
@@ -27,7 +28,7 @@ try{
  check('copy axis edit changes its visible pose and leaves both neighbours intact',JSON.stringify(beforeAxis[1].flap)!==JSON.stringify(afterAxis[1].flap)&&JSON.stringify(beforeAxis[0])===JSON.stringify(afterAxis[0])&&JSON.stringify(beforeAxis[2])===JSON.stringify(afterAxis[2]));
  await p.getByRole('button',{name:'Sprawdź wyjęcie samej klapy',exact:true}).click();
  check('partial capture exposes the missing endpoint in the UI',await p.getByText('Sama klapa nie zawiera ramy,',{exact:false}).isVisible());
- await p.locator('.relation-probe').screenshot({path:new URL('relation-carriage.png',import.meta.url).pathname.replace(/^\/(\w:)/,'$1')});
+ await p.locator('.relation-probe').screenshot({path:fileURLToPath(new URL('relation-carriage.png',import.meta.url))});
  await p.getByLabel('Kąt',{exact:true}).press('Home');const returned=await observed();
  check('rest pose returns exactly without changing the authored document',JSON.stringify(returned[1])===JSON.stringify(rest[1]));
  check('no runtime or console errors',errors.length===0);
