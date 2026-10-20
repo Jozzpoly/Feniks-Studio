@@ -43,6 +43,8 @@ Początkowa próba zatrzymywała się na `download.saveAs: canceled`. Minimalna 
 
 ## Granice wyniku i decyzje do recenzji
 
+Uzupełnienie z 21 października: [mała próba przenoszenia przygotowanej relacji razem z konstrukcją](probes/relations/README.md). Sprawdza nowe ID końców, lokalną oś i niezależność obróconych kopii. Nie dodaje autorstwa relacji do Tworzywa i nie zmienia poniższych granic importera ani UX.
+
 - **To próba jednej pracy w jednej karcie.** Okna współdzielą dokument eksperymentu; wybór projektu w powłoce nie przełącza go. Brak uzgodnienia równoległych zapisów kart, produkcyjnego odzyskiwania po błędnym starcie i wspólnej transakcji biblioteki hosta z dokumentem. Doświadczenie nie jest gotowe do integracji jako trwały edytor produktu.
 - **Macierze nie są językiem twórczym.** Grupy wybiera się głównie z drzewa, manipulator obraca wokół środka zaznaczenia, a skala zmienia także grubość elementów. Nie ma rozciągania przęsła z zachowaniem grubości słupków ani edycji topologii. To istotne pytania użytkowe, nie drobne braki matematyki.
 - **Przepis jest zależny od interpretacji źródła.** Używa hashy bajtów i ścieżek w drzewie importera. Pin hosta jawnie odrzuca inną wersję; nie stanowi migracji. Dla przyszłej aktualizacji importera trzeba odtworzyć tożsamość części albo świadomie utrwalić wynik w nowym źródle.
