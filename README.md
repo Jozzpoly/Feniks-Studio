@@ -26,3 +26,19 @@ Proponowany pierwszy wynik: można przynieść własne materiały, ułożyć z n
 Najbliższy proponowany przypadek: własne miejsce z wnętrzem, przejściem i różnicą wysokości, alternatywną kompozycją oraz trwałym powrotem. Sprawdzian obejmuje też drugą, odmienną pracę autora bez kolejnego programowania. Sam zapis danych i zachowanie okien nie kwalifikują tej zdolności. Najpierw porównanie ograniczonego zakresu zmian i krótki projekt próby; implementacja dawnego planu pozostaje wstrzymana. Dalsze autorstwo może obejmować także żywe światy oraz świadomie komponowane eksperymenty.
 
 Zasady współpracy i aktualne ograniczenia: [AGENTS.md](AGENTS.md).
+
+## Gdzie to jest i co jest obok
+
+Studio czeka na rozstrzygnięcie, gdzie ma rosnąć. Dopóki ono nie zapadnie, przynajmniej adresy mają
+być tutaj, a nie w czyjejś pamięci.
+
+| Rzecz | Adres | Czym jest |
+| --- | --- | --- |
+| Jaskinia | [repo](https://github.com/Jozzpoly/Jozz-Cave-Workbench) · [na żywo](https://jozzpoly.github.io/Jozz-Cave-Workbench/) | dzisiejszy warsztat właściciela: okna, układy, materiały, Kataster. `src/jaskinia-window.mjs` z gałęzi `checkpoint/astra-v5-core-2026-10-18` wpina się w jej system typów okien |
+| Jaskinia na Cloudflare | [repo](https://github.com/Jozzpoly/Jaskinia) · [na żywo](https://jaskinia.jozzpoly.workers.dev) | nowszy warsztat budowany z tamtego, moduł po module; każda gałąź ma tam własny adres podglądu |
+| Medium | [repo](https://github.com/Jozzpoly/Shared-Work-Medium-Lab) | badania nad tym, co ciała agentów realnie osiągają i jak to udowadniać |
+
+Dlaczego ta sekcja powstała: 14 XI 2026 zmierzono ekosystem grafem odnośników. Z dwunastu możliwych
+kierunków między repozytoriami właściciela **dziewięć nie miało ani jednego odnośnika** —
+repozytoria o sobie wspominały i nigdzie nie prowadziły. To repozytorium nie wskazywało na żadne
+inne, choć jego kod jest napisany pod jedno z nich.
