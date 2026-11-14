@@ -29,3 +29,21 @@ To publiczne repozytorium. Publikuj tutaj projekt i kod Studio. Surowe prywatne 
 Odróżniaj sprawdzenie struktury danych, działanie w UI i ocenę Ownera po rzeczywistym używaniu. Po zmianie sprawdzaj właściwą ścieżkę użytkową. Sam test zapisu nie potwierdza dobrej pracy z edytorem.
 
 Przed rozpoczęciem kolejnej fazy odczytaj bieżący stan repo i najnowszą bezpośrednią instrukcję. Aktualizuj istniejący punkt wejścia zamiast tworzyć konkurencyjne rejestry bieżącego stanu.
+
+## Słowa właściciela: kiedy agenci scalają sami (14 XI 2026, 23:46)
+
+Jego własne zdanie, dosłownie, z literówkami i bez naszej parafrazy — on sam ujął je w cudzysłów
+jako oświadczenie zgody:
+
+> Agenci scalają swoje pr gdy CI jest zielone i druga linia sprawdziła je u źródła.
+> Pr który który mówi, że sam jest dowodem albo decyzja o fundamencie,  scalają tylko po mojej zgodzie, wystarczy tylko "tak", albo inny synonim zgody lub potwierdzenia.
+
+Zaraz po nim dodał: *Nie jestem pewny czy to wystarczy na dłużej ale jakby co to będziemy budować
+lepsze wersję w przyszłości.* Czyli ta zasada sama jest tymczasowa.
+
+**Nasza wykładnia, nasza — nie jego.** Druga linia to agent, który **nie** robił tej zmiany i powtórzył
+polecenia u źródła: testy, próbne scalenie z dzisiejszym `main`, sprawdzenie pod żywym adresem, jeśli
+rzecz ma adres. Wynik zapisuje z poleceniem, w PR-ze albo w przekazie między liniami. Gdy opis PR-a
+mówi o sobie, że jest dowodem, a autor zmienił zdanie później — wygrywa wersja ostrożniejsza, dopóki
+właściciel nie powie *tak*. Z nim zostają, jego słowami z 10 XI: *„Istotne nieodwracalne decyzje dotyczące mojego dorobku,
+prywatności, dostępu, pieniędzy i rzeczywistego przełączenia używanej Jaskini”*. Scalenie, które przełącza jego codzienne okno, nie jest *swoim PR-em* w sensie tej zgody.
