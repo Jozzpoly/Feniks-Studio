@@ -1,5 +1,10 @@
 # Praca nad Feniks Studio
 
+> **Gdzie jest kod (14 XI 2026, Opus Code).** `main` nie zawiera aplikacji. Rdzeń Studia leży na
+> gałęzi `checkpoint/astra-v5-core-2026-10-18` (PR #1), Tworzywo na `experiment/tworzywo-construction`
+> (PR #2). Gałęzi nie kasujemy — dla tej pracy gałąź jest jedyną kopią. Repozytorium stoi, bo tak
+> zdecydował właściciel (*„Stoi bo czeka na poważną jaskinię”*, 13 XI); nie wznawiaj prac bez niego.
+
 ## Punkt wejścia
 
 Czytaj `README.md` i wskazany tam aktualny projekt. Rozróżniaj bezpośrednią decyzję Ownera, propozycję agenta, obserwację produktu i analizę źródeł. Dokument oznaczony jako propozycja nie stanowi zatwierdzonego zlecenia implementacji.
