@@ -1,4 +1,21 @@
 # Feniks Studio
+> [!IMPORTANT]
+> **Gdzie naprawdę jest kod (stan na 14 XI 2026, Opus Code; tylko dokumentacja).**
+> `main` nie zawiera aplikacji i to jest prawda — ale do dziś nie mówił, **gdzie ona jest**,
+> więc agent wchodzący tutaj jej nie znajdował. Jest w dwóch niescalonych gałęziach:
+>
+> | Gdzie | Co tam jest | Ostatnia praca |
+> | --- | --- | --- |
+> | [PR #1](https://github.com/Jozzpoly/Feniks-Studio/pull/1), gałąź `checkpoint/astra-v5-core-2026-10-18` | rdzeń Studia: `src/document.mjs` (sesja edycji z cofaniem), `src/viewport.mjs`, `src/jaskinia-window.mjs`, testy, `package.json` — 16 plików, 2 commity ponad `main` | 18 X 2026 |
+> | [PR #2](https://github.com/Jozzpoly/Feniks-Studio/pull/2), gałąź `experiment/tworzywo-construction` | Tworzywo: `experiments/material-as-construction/` — próba rozbierania i składania modeli, ze zrzutami z przebiegu — 31 plików, 3 commity ponad `main` | 21 X 2026 |
+>
+> **Żadnej z tych gałęzi nie kasujemy: dla tej pracy gałąź jest jedyną kopią.**
+>
+> **Dlaczego to stoi, słowami właściciela (13 XI 2026):** *„Stoi bo czeka na poważną jaskinię.
+> od początku z tego powodu. Feniks Studio będzie odblokowany jak będzie miał gdzie się rozwijać.”*
+> O Tworzywie: *„daje mi antysprawczość i rani swoją niesprawnością.”*
+> **To nie jest zaproszenie do wznowienia prac** — to jest odpowiedź na pytanie „gdzie to leży”.
+
 
 Warsztat do samodzielnego tworzenia miejsc, rzeczy, sytuacji i eksperymentów przyszłego Feniksa. Autor komponuje świat oraz własne środowisko pracy. Agenci rozwijają narzędzia i mechanizmy, dzięki którym kolejne pomysły można realizować samemu.
 
