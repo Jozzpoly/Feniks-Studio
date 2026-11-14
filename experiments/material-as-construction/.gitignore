@@ -1,0 +1,6 @@
+node_modules/
+tworzywo-probe.html
+server.json
+downloads/
+*-failed.*
+gizmo.json
