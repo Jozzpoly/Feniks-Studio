@@ -4,7 +4,11 @@
 > **Co jest na tej gałęzi (stan na 15 XI 2026, Opus Code; nic nie zostało wznowione).**
 > `feniks/wszystko-na-jednej` to pierwsze i jedyne miejsce, w którym cały dotychczasowy dorobek
 > Studia leży razem: `main` + `checkpoint/astra-v5-core-2026-10-18` + `experiment/tworzywo-construction`,
-> **43 pliki**. Scalenie dołożyło — nie zastąpiło niczego.
+> **41 plików** i to świadectwo. Scalenie dołożyło — nie zastąpiło niczego.
+>
+> **Zacznij stąd:** [Świadectwo Feniks Studio — marzenie, doświadczenia, porządek](SWIADECTWO.md).
+> Odpowiada na pytania „czym to miało być”, „co naprawdę spróbowano”, „gdzie co leży” i „od czego
+> by się zaczęło, gdyby wracać” — bez zaglądania w kod.
 >
 > **Jednocześnie `main` nadal nie zawiera aplikacji i to się nie zmienia samo.** Scalenie tej gałęzi
 > do `main` jest decyzją o fundamencie, a taka czeka na słowo właściciela — jego własna zasada jest
