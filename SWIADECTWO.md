@@ -17,14 +17,33 @@ Ten dokument niczego nie uruchamia i nie prosi o decyzję.
    przebudowywać — bez proszenia agenta o każdą czynność. Studio miało być jego warsztatem,
    wyprzedzającym możliwości dzisiejszych labów. [Szerzej →](#1-marzenie)
 2. **Doświadczenia.** Powstały dwie niezależne próby (październik 2026): **checkpoint rdzenia
-   dokumentu** i **Tworzywo — rozbieranie i składanie modeli w oknie Jaskini**. Obie mają zielone
-   testy modułów. **Żadna nigdy nie stała się czymś, czego właściciel mógłby użyć**, i on sam
-   ocenił je negatywnie. [Szerzej →](#2-doświadczenia)
+   dokumentu** i **Tworzywo — rozbieranie i składanie modeli w oknie Jaskini**. Testy modułów
+   przechodzą — choć nie wszystkie: 9 testów widoku 3D nie uruchamia się w ogóle. **Żadna próba
+   nigdy nie stała się czymś, czego właściciel mógłby użyć**, i on sam ocenił je negatywnie.
+   [Szerzej →](#2-doświadczenia)
 3. **Porządek.** 41 plików źródłowych na tej gałęzi — 6 z `main` (dokumentacja i zasady), 10 plików
    rdzenia, 25 plików eksperymentu — plus to świadectwo. **Żaden z nich nie jest fundamentem —
    fundamentu nikt nie zbudował.** [Szerzej →](#3-porządek)
 4. **Gdyby wracać.** Zacząć od jednego sprawdzianu, który rozstrzyga o swobodzie autora, a nie od
    powłoki, planu ani formatu. [Szerzej →](#4-gdyby-wracać)
+
+---
+
+## 0. Kto jest kto — dla kogoś, kto nic z tego nie zna
+
+Nazwy poniżej pojawiają się w całym dokumencie. Nie są tu opisane po to, żeby je oceniać, tylko
+żeby dalszy tekst dał się przeczytać bez wychodzenia stąd.
+
+| Nazwa | Co to jest |
+| --- | --- |
+| **Feniks** | Szersza ambicja właściciela: materialny świat z własnymi mieszkańcami, przedmiotami i mechanizmami. Nie jest programem — jest kierunkiem. |
+| **Feniks Studio** | **To repozytorium.** Miało być warsztatem, w którym właściciel sam tworzy miejsca i rzeczy dla Feniksa. Aplikacji nigdy nie było. |
+| **Jaskinia** | Warsztat właściciela, który **naprawdę działa i którego używa**: okna, układy, materiały, import modeli. Rozwija ją inny agent (Opus) w osobnym repozytorium `Jozzpoly/Jozz-Cave-Workbench`. Wersje v5, v6.3, v6.4 to kolejne jej stany; Studio próbowało wpiąć się raz w v5, raz w v6.3. **To jest ta „jaskinia”, na którą Studio czeka.** |
+| **Ruch** | Zdolność dodana w Jaskini v6.4: obracanie części modelu względem osi. Powstała niezależnie od próby relacji w tym repozytorium i działa w innym układzie odniesienia. |
+| **MiniFeniks** | Osobny, niepewny eksperyment właściciela — próba dzisiejszych możliwości świata. Studio miało zachować sens także wtedy, gdy MiniFeniks się zatrzyma. |
+| **„warsztat 2D” / E2e** | Jeszcze inny, osobny eksperyment (w repozytorium Medium) z łączeniem stykających się części na płaszczyźnie. **Nie ma go w tym repozytorium** — ale to właśnie tam właściciel sam próbował i nie dał rady; dlatego jest tu cytowany. |
+| **Astra, Opus, Sol, Medium, GPT, Splot** | Agenci. Astra napisała dokumenty i obie próby z października. Opus prowadzi Jaskinię. Reszta dopisywała niezależne kontrprzykłady do PR-ów. **Żadne z ich zdań nie jest zdaniem właściciela.** |
+| **„dawca”** | Słowo używane w tym repozytorium na kod lub dokument, z którego warto **wziąć pomysł albo mechanikę**, nie przejmując całości. Dawca to materiał do czytania i wybierania, nigdy gotowa część produktu. |
 
 ---
 
@@ -233,6 +252,10 @@ Właściciel 15 XI: *„Tam nic dobrego nie ma jeśli chodzi o próby wykonania�
   **20 odcinków komunikatu „Anulowano wskazywanie”**, skupionych wokół tworzenia zawiasu. To nie
   dotyczy kodu z tego repozytorium, ale dotyczy tego samego marzenia: moment, w którym autor chce
   coś sam zrobić, był najtrudniejszym momentem.
+  **Uczciwie o tym dowodzie:** jest tu najmocniejszy i zarazem najsłabiej przeze mnie potwierdzony.
+  Nagranie jest prywatne, nie widziałem go; opieram się na opisie w komentarzu do PR #2, a sam ten
+  komentarz zastrzega, że to odczytane z ekranu odcinki komunikatu, **nie zapis kliknięć** — nie da
+  się z nich odtworzyć, co dokładnie autor chciał kliknąć.
 
 **Uwaga o autorstwie komentarzy w PR #1 i #2.** Wszystkie są opublikowane z konta właściciela
 (`Jozzpoly`), ale ich treść pochodzi od agentów (GPT, Medium, Splot) i on je tylko przekazał.
@@ -245,12 +268,17 @@ Właściciel 15 XI: *„Tam nic dobrego nie ma jeśli chodzi o próby wykonania�
 ### 3.1. Gdzie co leży po scaleniu
 
 Gałąź `feniks/wszystko-na-jednej` = `main` + `checkpoint/astra-v5-core-2026-10-18` (PR #1)
-+ `experiment/tworzywo-construction` (PR #2). **41 plików.** Nic nie zostało usunięte ani nadpisane;
-obie gałęzie źródłowe i oba PR-y zostają takie, jakie były.
++ `experiment/tworzywo-construction` (PR #2). **41 plików źródłowych**, plus ten dokument. Nic nie
+zostało usunięte ani nadpisane; obie gałęzie źródłowe i oba PR-y zostają takie, jakie były.
+
+Rachunek, żeby nie było wątpliwości: **6** plików przychodzi z `main` (`.gitignore`, `AGENTS.md`,
+`README.md` i 3 dokumenty z 14–16 X), **10** dokłada checkpoint (7 plików kodu i testów,
+`package.json` z `package-lock.json` liczone jako 2, oraz 2 dokumenty z 18 X), **25** dokłada
+Tworzywo. Razem 41. Tabela niżej grupuje je według roli, nie według tych liczb.
 
 | Co | Gdzie | Czym to jest |
 | --- | --- | --- |
-| Intencje i granice | `docs/` (5 plików), `README.md`, `AGENTS.md` | **Dawca do czytania.** Najwięcej wartości ma tu definicja porażki z 14 X i odrzucenie własnych rekomendacji z 16 i 18 X. |
+| Intencje i granice | `README.md`, `AGENTS.md` i 5 dokumentów w `docs/` (3 przyszły z `main`, 2 z checkpointu) | **Dawca do czytania.** Najwięcej wartości ma tu definicja porażki z 14 X i odrzucenie własnych rekomendacji z 16 i 18 X. |
 | Rdzeń dokumentu | `src/document.mjs`, `tests/document.test.mjs` | **Dawca mechaniki**, nie schematu: atomowa komenda, niemutowalny snapshot, warianty, undo/redo. Działa dziś, 19/19. |
 | Własny widok 3D | `src/viewport.mjs`, `tests/glb.test.mjs` | Drugi runtime Three obok Jaskini. **Dawca wzorców cyklu życia; nie rekomendacja integracji** — tak napisała autorka. |
 | Wpięcie w Jaskinię v5 | `src/jaskinia-window.mjs`, `tools/build.mjs` | **Nie ma prawa być fundamentem.** Niezakwalifikowany szkic do hosta, którego tu nie ma i który sam został zastąpiony przez v6. |
@@ -292,6 +320,10 @@ kto najlepiej znał jej granicę:
 
 I przeczytać najpierw **definicję porażki z 14 X** (sekcja 7 projektu pierwszej sesji). Jest
 krótsza niż wszystko inne i trafniejsza.
+
+**Ile który z nich kosztuje — nie wiem i nie będę zgadywał.** Dokument z 16 X żąda „uczciwego
+porównania kosztu”, ale koszt zależy od decyzji, której właściciel nie podjął: gdzie Studio ma
+rosnąć. Dopóki jej nie ma, każda liczba byłaby wymyślona. To jest luka świadoma, nie przeoczenie.
 
 ### 4.2. Czego nie powtarzać
 
