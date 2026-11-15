@@ -1,0 +1,15 @@
+{
+  "name": "feniks-construction-probe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test core.test.mjs",
+    "build": "node serve.mjs --build-only",
+    "start": "node serve.mjs",
+    "test:browser": "node verify.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "playwright": "1.62.1"
+  }
+}
