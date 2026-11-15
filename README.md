@@ -1,15 +1,23 @@
 # Feniks Studio
+
 > [!IMPORTANT]
-> **Gdzie naprawdę jest kod (stan na 14 XI 2026, Opus Code; tylko dokumentacja).**
-> `main` nie zawiera aplikacji i to jest prawda — ale do dziś nie mówił, **gdzie ona jest**,
-> więc agent wchodzący tutaj jej nie znajdował. Jest w dwóch niescalonych gałęziach:
+> **Co jest na tej gałęzi (stan na 15 XI 2026, Opus Code; nic nie zostało wznowione).**
+> `feniks/wszystko-na-jednej` to pierwsze i jedyne miejsce, w którym cały dotychczasowy dorobek
+> Studia leży razem: `main` + `checkpoint/astra-v5-core-2026-10-18` + `experiment/tworzywo-construction`,
+> **43 pliki**. Scalenie dołożyło — nie zastąpiło niczego.
 >
-> | Gdzie | Co tam jest | Ostatnia praca |
+> **Jednocześnie `main` nadal nie zawiera aplikacji i to się nie zmienia samo.** Scalenie tej gałęzi
+> do `main` jest decyzją o fundamencie, a taka czeka na słowo właściciela — jego własna zasada jest
+> wpisana w [AGENTS.md](AGENTS.md). Oba zdania obowiązują naraz: komplet jest tutaj, `main` go nie ma.
+>
+> | Skąd | Co wniosło | Ostatnia praca |
 > | --- | --- | --- |
-> | [PR #1](https://github.com/Jozzpoly/Feniks-Studio/pull/1), gałąź `checkpoint/astra-v5-core-2026-10-18` | rdzeń Studia: `src/document.mjs` (sesja edycji z cofaniem), `src/viewport.mjs`, `src/jaskinia-window.mjs`, testy, `package.json` — 16 plików, 2 commity ponad `main` | 18 X 2026 |
-> | [PR #2](https://github.com/Jozzpoly/Feniks-Studio/pull/2), gałąź `experiment/tworzywo-construction` | Tworzywo: `experiments/material-as-construction/` — próba rozbierania i składania modeli, ze zrzutami z przebiegu — 31 plików, 3 commity ponad `main` | 21 X 2026 |
+> | `main` | 6 plików dokumentacji, zero aplikacji | 15 XI 2026 |
+> | [PR #1](https://github.com/Jozzpoly/Feniks-Studio/pull/1), gałąź `checkpoint/astra-v5-core-2026-10-18` | rdzeń Studia: `src/document.mjs` (sesja edycji z cofaniem), `src/viewport.mjs`, `src/jaskinia-window.mjs`, testy, `package.json` — 16 plików | 18 X 2026 |
+> | [PR #2](https://github.com/Jozzpoly/Feniks-Studio/pull/2), gałąź `experiment/tworzywo-construction` | Tworzywo: `experiments/material-as-construction/` — próba rozbierania i składania modeli, ze zrzutami z przebiegu — 31 plików | 21 X 2026 |
 >
-> **Żadnej z tych gałęzi nie kasujemy: dla tej pracy gałąź jest jedyną kopią.**
+> **Żadnej z gałęzi źródłowych nie kasujemy, PR-y #1 i #2 zostają otwarte: dla tej pracy gałąź jest
+> jedyną kopią.**
 >
 > **Dlaczego to stoi, słowami właściciela (13 XI 2026):** *„Stoi bo czeka na poważną jaskinię.
 > od początku z tego powodu. Feniks Studio będzie odblokowany jak będzie miał gdzie się rozwijać.”*
@@ -27,7 +35,27 @@ W tym szkicu powstaje [Tworzywo — rozbierz, złóż, użyj](experiments/materi
 
 [Próba relacji](experiments/material-as-construction/probes/relations/README.md) sprawdza także zachowanie jednej przygotowanej decyzji ruchowej przy kopiowaniu konstrukcji. 9 testów mechanizmu i 6 kontroli natywnego widoku przeszło. **Nie daje jeszcze możliwości samodzielnego definiowania relacji na własnych modelach.** Ten kolejny sprawdzian autorstwa pozostaje ważniejszy od rozbudowy demonstracji.
 
-Wcześniejszy [PR #1](https://github.com/Jozzpoly/Feniks-Studio/pull/1) zachowuje odrębny checkpoint dokumentów i wariantów. Ta próba nie wymaga jego scalenia. Jaskinia dostarcza używaną powłokę i runtime; jej bieżącą produkcję prowadzi Opus. Zakres prób Studio obejmuje samodzielne poszukiwanie nowych możliwości autora bez kopiowania powłoki aplikacji.
+Wcześniejszy [PR #1](https://github.com/Jozzpoly/Feniks-Studio/pull/1) zachowuje odrębny checkpoint dokumentów i wariantów. Ta próba nie wymagała jego scalenia. Jaskinia dostarcza używaną powłokę i runtime; jej bieżącą produkcję prowadzi Opus. Zakres prób Studio obejmuje samodzielne poszukiwanie nowych możliwości autora bez kopiowania powłoki aplikacji.
+
+## Stan — 18 października 2026
+
+**Opus prowadzi budowę Jaskini/Studio. Astra pomaga analizą, rozstrzygającymi próbami, recenzją i uzgodnionymi wkładami.** Wspólny kierunek jest zapisany w [Kompasie Jaskini (#5)](https://github.com/Jozzpoly/Jozz-Cave-Workbench/issues/5). Jedno miejsce pracy dla Ownera nie oznacza jednego repo ani monolitu.
+
+**Bieżący materiał Astry do recenzji:** [Studio po v6 — wkład do wspólnej budowy](docs/superpowers/plans/2026-10-18-studio-po-v6-do-recenzji.md). Skupia się na ciągłości autorskiego miejsca: konkretnej wersji materiału i jego ustawień, wariantach, historii, zapisie i odzyskaniu pracy. Nie jest zleceniem równoległej budowy ani nowym kompasem.
+
+Opus rozwija [fundament v6 w PR #4](https://github.com/Jozzpoly/Jozz-Cave-Workbench/pull/4#issuecomment-6251726558): wiele kart, adresy, rewizje ustawień materiałów i zależności plików. [Poprosił o checkpoint lokalnego szkicu Studio](https://github.com/Jozzpoly/Jozz-Cave-Workbench/pull/2#issuecomment-6251726713), aby wykorzystać dokument, warianty i cofanie. Nie ma potrzeby przejmowania całego starego formatu ani osobnego renderowania.
+
+## Co zawiera ten checkpoint
+
+- `src/document.mjs` i `tests/document.test.mjs`: atomowa sesja dokumentu, walidacja, warianty, undo/redo. Obecny schemat osadza GLB; wymaga adaptacji do wspólnej biblioteki materiałów i rewizji interpretacji.
+- `src/viewport.mjs` i `tests/glb.test.mjs`: wcześniejsza próba własnego widoku i kontroli GLB. Mechanizmy lifecycle i odrzucenia spóźnionych wyników są dawcą; drugi runtime Three nie jest rekomendacją dalszej integracji.
+- `src/jaskinia-window.mjs` i `tools/build.mjs`: **niezakwalifikowany szkic integracji ze starą Jaskinią v5**, zachowany dla przeglądu. Nie stanowi gotowego UI ani bezpiecznego magazynu pracy Ownera.
+
+Testy modułów: `npm ci --ignore-scripts`, następnie `npm test`. Wynik nie dowodzi działania całego Studio. `build` wymaga starej lokalnej kopii badawczej Jaskini i nie jest przenośnym buildem produktu; `test:browser` wskazuje jeszcze nieutworzony plik. Nie przedstawiamy tych poleceń jako gotowej drogi „wypróbuj Studio”.
+
+Ostatni własny przebieg Astry, 18 października: `npm test` — **28 PASS, 0 FAIL** (19 testów dokumentu, 9 testów kontroli GLB). Nie uruchamiano builda ani pełnej sesji UI tego szkicu.
+
+Wyniki i ograniczenia checkpointu: [plan do recenzji](docs/superpowers/plans/2026-10-18-studio-po-v6-do-recenzji.md). Dalszy adapter ma korzystać z `window.Jaskinia`, wspólnych Materiałów i sceny; dokument i historia treści pozostają poza stanem okna i historią układu.
 
 ## Historyczny stan — 16 października 2026
 
@@ -50,7 +78,13 @@ Proponowany pierwszy wynik: można przynieść własne materiały, ułożyć z n
 
 Najbliższy proponowany przypadek: własne miejsce z wnętrzem, przejściem i różnicą wysokości, alternatywną kompozycją oraz trwałym powrotem. Sprawdzian obejmuje też drugą, odmienną pracę autora bez kolejnego programowania. Sam zapis danych i zachowanie okien nie kwalifikują tej zdolności. Najpierw porównanie ograniczonego zakresu zmian i krótki projekt próby; implementacja dawnego planu pozostaje wstrzymana. Dalsze autorstwo może obejmować także żywe światy oraz świadomie komponowane eksperymenty.
 
-Zasady współpracy i aktualne ograniczenia: [AGENTS.md](AGENTS.md).
+## Starsze rozpoznanie
+
+[Pierwsza sesja z 14 października](docs/superpowers/specs/2026-10-14-pierwsza-sesja-studio-design.md) zachowuje cel własnego miejsca, alternatywy i powrotu. [Plan z 15 października](docs/superpowers/plans/2026-10-15-pierwsza-sesja-studio.md) oraz [wczesny plan z 18 października](docs/superpowers/plans/2026-10-18-miejsce-w-jaskini.md) są historyczne, nie wykonuje się ich automatycznie. [Rozpoznanie wspólnego warsztatu](docs/research/2026-10-16-wspolny-warsztat.md) opisuje poprzedni etap.
+
+MiniFeniks pozostaje niepewną próbą; nie wyznacza modelu Studio. Jaskinia jest młodym warsztatem do rozwijania, a nie ostatecznym sufitem możliwości. Laby mogą wykorzystywać wybraną część autorskiej pracy przez jawne dostosowania.
+
+Zasady współpracy, publikacji i komunikacji oraz aktualne ograniczenia: [AGENTS.md](AGENTS.md).
 
 ## Gdzie to jest i co jest obok
 
