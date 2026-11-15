@@ -1,0 +1,173 @@
+{
+  "ref": "dd47f3253dbcf522b4cd671c794599d32cbe79b9",
+  "url": "http://127.0.0.1:51800",
+  "browser": "151.0.7922.34",
+  "checks": [
+    {
+      "name": "native view opens once",
+      "pass": true
+    },
+    {
+      "name": "two different textured sources, 39 meshes",
+      "pass": true
+    },
+    {
+      "name": "detach preserves real mesh vertices, UV and texture under reflection/shear",
+      "pass": true,
+      "detail": {
+        "maxError": 0,
+        "coordinates": 1062,
+        "pass": true
+      }
+    },
+    {
+      "name": "reparent under rotated nonuniform parent preserves appearance",
+      "pass": true,
+      "detail": {
+        "maxError": 2.6645352591003757e-15,
+        "coordinates": 1062,
+        "pass": true
+      }
+    },
+    {
+      "name": "UI undo/redo preserves difficult reparent",
+      "pass": true,
+      "detail": {
+        "maxError": 2.6645352591003757e-15,
+        "coordinates": 1062,
+        "pass": true
+      }
+    },
+    {
+      "name": "parent+child selection assembles once without changing appearance",
+      "pass": true,
+      "detail": {
+        "maxError": 0,
+        "coordinates": 1062,
+        "pass": true
+      }
+    },
+    {
+      "name": "real pointer drag changes selected copied part",
+      "pass": true
+    },
+    {
+      "name": "editing copy B leaves copy A and original construction unchanged",
+      "pass": true
+    },
+    {
+      "name": "one undo reverses entire pointer gesture",
+      "pass": true
+    },
+    {
+      "name": "rejected singular edit restores preview to accepted document",
+      "pass": true,
+      "detail": {
+        "docSame": true,
+        "shown": [
+          0.9998476951563913,
+          0.01745240643728351,
+          0,
+          0,
+          -0.01745240643728351,
+          0.9998476951563913,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.3458850998833016,
+          0.75,
+          1.25,
+          1
+        ],
+        "saved": [
+          0.9998476951563913,
+          0.01745240643728351,
+          0,
+          0,
+          -0.01745240643728351,
+          0.9998476951563913,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.3458850998833016,
+          0.75,
+          1.25,
+          1
+        ]
+      }
+    },
+    {
+      "name": "download embeds both needed sources and one reusable recipe",
+      "pass": true
+    },
+    {
+      "name": "new context really has empty document/library",
+      "pass": true
+    },
+    {
+      "name": "fresh context restores exact document, geometry and texture despite altered namesake",
+      "pass": true,
+      "detail": {
+        "maxError": 0,
+        "coordinates": 4914,
+        "pass": true
+      }
+    },
+    {
+      "name": "local autosave survives page reload with one native view",
+      "pass": true,
+      "detail": {
+        "maxError": 0,
+        "coordinates": 4914,
+        "pass": true
+      }
+    },
+    {
+      "name": "wrong source hash refuses replacement atomically",
+      "pass": true,
+      "detail": {
+        "unchanged": true,
+        "msg": "Źródłowy model nie zgadza się z zapisanym odciskiem."
+      }
+    },
+    {
+      "name": "101st recipe is refused before mutating or saving an unreadable package",
+      "pass": true
+    },
+    {
+      "name": "maximum accepted recipe count is readable",
+      "pass": true
+    },
+    {
+      "name": "31st source is refused before changing the author document",
+      "pass": true,
+      "detail": {
+        "unchanged": true,
+        "msg": "Ta próba mieści 30 źródłowych modeli w jednej pracy."
+      }
+    },
+    {
+      "name": "no uncaught page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "console has only the intentional refusal errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [
+    "Error: Nie można odwrócić macierzy (singular).\n    at inverse (http://127.0.0.1:51800/:15665:80)\n    at validate (http://127.0.0.1:51800/:15693:5)\n    at Construction.edit (http://127.0.0.1:51800/:15790:5)\n    at Construction.transform (http://127.0.0.1:51800/:15840:17)\n    at pf.<anonymous> (http://127.0.0.1:51800/:16642:19)\n    at pf.dispatchEvent (http://127.0.0.1:51800/:1948:12800)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:256)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+    "Error: Ta próba mieści 100 zachowanych części w jednej pracy.\n    at http://127.0.0.1:51800/:16590:50\n    at attempt (http://127.0.0.1:51800/:16179:21)\n    at HTMLButtonElement.onclick (http://127.0.0.1:51800/:16176:118)"
+  ],
+  "consoleWarnings": [],
+  "scope": "Synthetic BB only. Real UI selection, grouping, copying, pointer drag, undo/redo, download, file upload, fresh storage, reload. Affine stress setup and singular input are instrumented. No Owner profile or production/full-suite qualification."
+}
