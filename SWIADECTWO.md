@@ -20,9 +20,9 @@ Ten dokument niczego nie uruchamia i nie prosi o decyzję.
    dokumentu** i **Tworzywo — rozbieranie i składanie modeli w oknie Jaskini**. Obie mają zielone
    testy modułów. **Żadna nigdy nie stała się czymś, czego właściciel mógłby użyć**, i on sam
    ocenił je negatywnie. [Szerzej →](#2-doświadczenia)
-3. **Porządek.** 41 plików na tej gałęzi: 5 dokumentów intencji, 10 plików rdzenia, 25 plików
-   eksperymentu, 1 plik tego świadectwa. **Żaden z nich nie jest fundamentem — fundamentu nikt nie
-   zbudował.** [Szerzej →](#3-porządek)
+3. **Porządek.** 41 plików źródłowych na tej gałęzi — 6 z `main` (dokumentacja i zasady), 10 plików
+   rdzenia, 25 plików eksperymentu — plus to świadectwo. **Żaden z nich nie jest fundamentem —
+   fundamentu nikt nie zbudował.** [Szerzej →](#3-porządek)
 4. **Gdyby wracać.** Zacząć od jednego sprawdzianu, który rozstrzyga o swobodzie autora, a nie od
    powłoki, planu ani formatu. [Szerzej →](#4-gdyby-wracać)
 
@@ -350,8 +350,10 @@ Wszystko poniżej wykonano 15 XI 2026 poleceniami, nie z pamięci.
 git ls-tree -r --name-only origin/main                                  →  6 plików
 git ls-tree -r --name-only origin/checkpoint/astra-v5-core-2026-10-18   → 16 plików
 git ls-tree -r --name-only origin/experiment/tworzywo-construction      → 31 plików
-git ls-tree -r --name-only feniks/wszystko-na-jednej                    → 41 plików
+git ls-tree -r --name-only feniks/wszystko-na-jednej                    → 42 pliki
 ```
+
+Te 42 to **41 plików źródłowych + ten dokument**.
 
 **41, nie 43.** Zlecenie zapowiadało 43 pliki — ten pomiar się nie potwierdza i nie dopasowuję go
 do zapowiedzi. Suma rozłączna wygląda tak: 6 plików `main` + 10 plików, które checkpoint dodaje
